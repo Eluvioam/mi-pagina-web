@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Imagen con Fondo y Texto</title>
+    <link rel="stylesheet" href="sala.css" media="screen">
+
+
+  
+</head>
+<body>
+
+
+
+
+
+         <!-- Banner -->
+         <div class="container">
+          <div class="image-container">
+              <img src="imagenes/conference-room-338563_1280.jpg" alt="Imagen de fondo">
+              <div class="overlay"></div>
+              <div class="text">SALAS DE CONFERENCIAS</div>
+              <div class="additional-text">Salas de Confidencialidad: Seguridad y Tranquilidad</div>
+              
+              <div class="salas-container">
+                <div class="salas-box" onclick="toggleSalaReunion()">
+                    ▼
+                </div>
+                <div class="sala-reunion-box" id="salaReunionBox" style="display: none;">
+                    <a href="sala de reunion/salareunion.html">Sala de reunión</a>
+                </div>
+            </div>
+            
+            
+          </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+      <!-- Rectangulo gris, beneficios, experiencia y servicios -->
+    <div class="informacion-horizontal">
+      <div class="item">
+          <h3>Servicios</h3>
+          <p>Contamos con salas de conferencias equipadas con la última tecnología: proyectores de alta calidad, pantallas interactivas, Wifi de alta velocidad, y sistemas de sonido profesionales. Nos aseguramos de que tu reunión sea todo un éxito.</p>
+      </div>
+      <div class="item">
+          <h3>Experiencia</h3>
+          <p>Con más de 10 años en el mercado, hemos brindado soluciones para empresas, universidades y equipos profesionales. Nuestra experiencia nos permite ofrecer espacios ideales para cada tipo de evento, adaptándonos a las necesidades de cada cliente.</p>
+      </div>
+      <div class="item">
+          <h3>Beneficios</h3>
+          <p>Al elegir nuestras salas, obtienes acceso a espacios modernos, cómodos y completamente equipados. Además, ofrecemos flexibilidad en horarios, opciones de catering y atención personalizada para asegurar que tu evento sea memorable.</p>
+      </div>
+  </div>
+  
+  
+  
+
+
+
+
+
+
+
+      <!-- Imagenes y caracteristicas -->
+      <div class="galeria-salas">
+        <!-- Carrusel de imágenes -->
+        <div class="imagenes-salas">
+            <div class="carrusel">
+                <img src="imagenes/conference-room-338563_1280.jpg" alt="Sala 1">
+                <img src="imagenes/business-6657309_1280.jpg" alt="Sala 2">
+                <img src="imagenes/sala-8174708_1280.jpg" alt="Sala 3">
+                <img src="imagenes/lecture-3986809_1280.jpg" alt="Sala 4">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    
+       <!-- Detalles de las salas -->
+<div class="detalles-salas">
+  <div class="sala">
+      <h2>Caracteristicas</h2>
+      <!-- Servicios divididos en dos columnas -->
+      <div class="servicios">
+          <div class="servicio">
+              <p><i class="fas fa-users"></i> Capacidad: 40 personas</p>
+              <p><i class="fas fa-tv"></i> Proyector 3D</p>
+              <p><i class="fas fa-wifi"></i> Wifi alta velocidad</p>
+          </div>
+          <div class="servicio">
+              <p><i class="fas fa-chair"></i> Sillones comodos</p>
+              <p><i class="fas fa-table"></i> Mesa de trabajo</p>
+              <p><i class="fas fa-television"></i> Televisor de 38 In</p>
+          </div>
+      </div>
+      <p class="precio"><i class="fas fa-dollar-sign"></i> Precio por hora: $28,000</p>
+
+  </div>
+</div>
+</div>
+
+  
+<form action="enviar.php" method="POST" class="formulario-reserva"> 
+    <h3>Contactenos</h3>
+
+    <div class="nombre-correo">
+        <div class="campo-nombre">
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="campo-correo">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+        </div>
+    </div>
+
+    <button class="confirmar-reserva-btn" type="submit">Enviar</button>
+</form>
+
+  
+
+
+
+
+
+
+
+
+
+<!-- Bloc de comentarios interactivos -->
+<div class="comment-section">
+    <h3>Comentarios y Valoraciones</h3>
+    <div class="comment-form">
+        <input type="text" id="commentName" placeholder="Tu nombre" />
+        <textarea id="commentText" placeholder="Tu comentario"></textarea>
+        <div class="rating">
+            <label for="stars">Valora: </label>
+            <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+            <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+            <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+            <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+            <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+        </div>
+        
+        <button onclick="submitComment()">Enviar Comentario</button>
+    </div>
+
+    <div class="comments-list" id="commentsList">
+        <!-- Los comentarios se agregarán aquí -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<body>
+    <div class="main-content">
+        <!-- TODO el contenido de la página -->
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Contamos con salas de conferencia equipadas con tecnología de vanguardia y un ambiente cómodo para tus reuniones y eventos.</p>
+            </div>
+
+            <div class="footer-section contacto">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: <a href="https://www.google.com/maps?q=Calle+25+de+mayo+81,+Buenos+Aires,+Argentina" target="_blank">Calle 25 de mayo 81. Argentina, Buenos Aires</a></p>
+                <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+13364412031">+1 3364 412031</a></p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:MineralBank@hotmail.com">MineralBank@hotmail.com</a></p>
+            </div>
+            
+            
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@ArmandoLeguizamon/featured" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@armandoleguizamon.of" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/armandoleguizamon.of/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/mineral-bank/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025  Copyright Mineral Bank Todos los derechos reservados | <a href="#">Política de privacidad</a></p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+<script src="./sala.js"></script>
+
+
+
+
+</body>
+</html>
